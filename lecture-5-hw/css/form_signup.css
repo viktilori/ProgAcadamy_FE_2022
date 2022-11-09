@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'helveticabold';
+    src: url('../fonts/helvetica-bold-webfont.woff2') format('woff2'),
+        url('../fonts/helvetica-bold-webfont.woff') format('woff'),
+        url('../fonts/Helvetica-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "helveticabold", "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.form {
+    width: 500px;
+    height: 450px;
+    border: 2px solid #333333;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.form__info {
+    margin-top: 15px;
+
+}
+
+.form__item {
+    width: 500px;
+    margin: 10px auto;
+    font-size: 14px;
+    font-weight: 200;
+    font-family: Helvetica;
+    letter-spacing: 0;
+}
+
+.form__itemText {
+    margin: 5px 22px;
+}
+
+h1 {
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
+    letter-spacing: -3px;
+    color: #333333;
+}
+
+input {
+    width: 85%;
+    padding: 10px 15px;
+    margin: 0 auto;
+    display: block;
+}
+
+input:focus {
+    border: 2px solid #8cc5f2;
+    border-radius: 2px;
+    box-shadow: #d2e9fa 0 0 6px 3px;
+    outline: #8cc5f2;
+}
+
+input[type="submit"] {
+    margin: 5px 22px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 10px 15px;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    background: rgb(0, 70, 204);
+    background: linear-gradient(360deg, rgba(0, 70, 204, 1) 35%, rgba(38, 136, 211, 1) 100%);
+    text-decoration: none;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: rgb(41, 145, 224) #000 rgb(0, 70, 199);
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(rgb(41, 145, 224), rgb(0, 70, 199)) rgb(41, 145, 224);
+}
+
+input[type="submit"]:active {
+    background: linear-gradient(rgba(0, 70, 204, 1), rgb(41, 145, 224)) rgb(0, 70, 199);
+}

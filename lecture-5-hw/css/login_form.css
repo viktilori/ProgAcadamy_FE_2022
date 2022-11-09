@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+        url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/bg-contact-form.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
+    height: 400px;
+    width: 400px;
+    font-family: 'open_sansregular';
+}
+
+.form__header {
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    background: rgba(248, 248, 248, .9);
+    font-size: 25px;
+    color: #232323;
+}
+
+.form__body {
+    height: 210px;
+    padding: 25px 30px 5px;
+    border: none;
+    background: rgba(255, 255, 255, .9);
+    color: #666;
+}
+
+.form__item {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+}
+
+.form__itemText {
+    font-size: 14px;
+}
+
+.form__itemInput {
+    position: relative;
+}
+
+i {
+    font-size: 12px;
+    color: #cedada;
+    padding: 8px 0 8px 10px;
+    position: absolute;
+    right: 12px;
+    top: 3px;
+    border-left: 2px solid #cedada;
+}
+
+a {
+    font-size: 11px;
+    margin-left: 41.5%;
+    color: #5ab6d0;
+}
+
+input {
+    border: 2px solid #cedada;
+    width: 200px;
+    height: 34px;
+    box-sizing: border-box;
+}
+
+.checkbox {
+    margin-top: 15px;
+    font-size: 12px;
+    width: 300px;
+    margin-left: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox>input {
+    width: 30px;
+    height: 20px;
+}
+
+.form__footer {
+    padding: 25px 15px 25px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    background: rgba(248, 248, 248, .9);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__btn {
+    margin: 0 12px;
+}
+
+.form__btn:nth-child(1) {
+    width: 100px;
+    color: #f5f6f6;
+    background-color: #bfc1c0;
+    border: none;
+}
+
+.form__btn:nth-child(2) {
+    width: 80px;
+    color: #f5f6f6;
+    background-color: #54b5e0;
+    border: none;
+}
