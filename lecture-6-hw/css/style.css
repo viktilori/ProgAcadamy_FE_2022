@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.page__mainSection {
+    height: 60%;
+    background-image: url(../img/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 125%;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.page__name {
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    height: 120px;
+    width: 100%;
+    font-family: 'Nothing You Could Do', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+}
+
+/*  first-letter did't work :(   */
+h1::before {
+    content: 'L';
+    font-size: 90px;
+}
+
+.page__articles {
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page__article {
+    width: 365px;
+    height: 270px;
+    padding: 40px;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px black;
+    font-size: 13px;
+    text-align-last: right;
+    color: rgba(255, 250, 240, 0.8);
+    animation-delay: 1s;
+}
+
+h4 {
+    display: inline-block;
+}
+
+article i {
+    padding-right: 15px;
+    font-size: 20px;
+}
+
+h4 {
+    padding: 20px 10px 15px 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Nothing You Could Do', cursive;
+}
+
+.page__infoSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.page__info {
+    font-size: 14px;
+    width: 700px;
+    margin-right: 100px;
+    animation-delay: 1.7s;
+}
+
+h3 {
+    font-family: 'Nothing You Could Do', cursive;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.page__text {
+    text-align: justify;
+    text-align-last: right;
+    display: flex;
+}
+
+.page__contacts {
+    display: flex;
+    flex-direction: column;
+    animation-delay: 1.7s;
+}
+
+h5 {
+    padding: 0 25px;
+    font-size: 15px;
+}
+
+.page__links {
+    height: 200px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: darkgrey;
+}
+
+a:visited {
+    color: #9d8e6e;
+}
+
+a:active {
+    color: #80745a;
+}
+
+div>i {
+    font-size: 30px;
+    color: #9d8e6e;
+}
+
+.fa-twitter {
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    background-color: #9d8e6e;
+    border-radius: 100px 100px;
+}
