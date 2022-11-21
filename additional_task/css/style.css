@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+        url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaythin';
+    src: url('../fonts/raleway-thin-webfont.woff2') format('woff2'),
+        url('../fonts/raleway-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open_sansregular';
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    height: 100vh;
+}
+
+.header {
+    height: 9%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 80px;
+    height: 27px;
+    margin-left: 130px;
+}
+
+.header__links {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 130px;
+    font-family: 'open_sansregular', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header__link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header__link:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.main {
+    background-image: url(../img/main_bg.jpg);
+    backdrop-filter: brightness(60%);
+    height: 79%;
+    background-size: 100% 130%;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__info {
+    margin-left: 130px;
+    width: 470px;
+}
+
+.main__heading {
+    color: white;
+    font-weight: 300;
+    font-family: 'ralewaythin', sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.main__text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-family: 'ralewaythin', sans-serif;
+    font-weight: 600;
+    width: 450px;
+
+}
+
+.main__dash {
+    width: 70px;
+    height: 1.5px;
+    background-color: white;
+    margin: 30px 0;
+}
+
+.main__button {
+    padding: 8px 35px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.main__button:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: #666666;
+}
+
+.main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-right: 130px;
+    height: 310px;
+    width: 320px;
+    background-color: white;
+}
+
+.form__heading {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+span {
+    text-transform: uppercase;
+    color: #ff8b38;
+    padding: 0 5px;
+}
+
+.form_input {
+    width: 80%;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgb(225, 225, 225);
+    outline: none;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.form_input::placeholder {
+    color: #d3d3d3;
+}
+
+.form_input:focus {
+    border: 1px solid #ff8b38;
+}
+
+.form__button {
+    height: 45px;
+    width: 100%;
+    background-color: #ff8b38;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.footer__info {
+    margin-left: 130px;
+}
+
+.footer__heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.footer__text {
+    font-size: 13px;
+    width: 350px;
+    color: #86878B;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 130px;
+}
+
+.footer__link {
+    font-size: 40px;
+    text-decoration: none;
+    color: #cccccc;
+    transition: 0.3s;
+}
+
+.footer__link:hover {
+    color: #666666;
+}
+
+.fa-wifi {
+    font-size: 35px;
+    transform: rotate(45deg);
+}
