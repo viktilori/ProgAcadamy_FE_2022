@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="inp">
+    <button id="createEl">add element</button>
+    <br>
+    <br>
+    <select name="" id="select">
+        <option value="">First</option>
+        <option value="">Second</option>
+        <option value="">Third</option>
+        <option value="">Fourth</option>
+        <option value="">Fifth</option>
+    </select>
+    <br>
+    <br>
+    <button id="getFirst">First</button>
+    <button id="getLast">Last</button>
+    <button id="getNext">Next</button>
+    <button id="getPrev">Previous</button>
+
+    <!-- 4 кнопки які дозволять з select вибирати option  (перший, останій, наступний та минулий) -->
+    <script>
+        const getFirstEl = document.querySelector("#getFirst");
+        const getLastEl = document.querySelector("#getLast");
+        const getNextEl = document.querySelector("#getNext");
+        const getPrevEl = document.querySelector("#getPrev");
+        const select = document.querySelector("#select");
+        const createEl = document.getElementById('createEl');
+        const inp = document.getElementById('inp');
+
+        getFirstEl.addEventListener('click', function () {
+            select.selectedIndex = 0;
+        });
+        getLastEl.addEventListener('click', function () {
+            select.selectedIndex = select.length - 1;
+        });
+        getNextEl.addEventListener('click', function () {
+            if (select.selectedIndex != select.length - 1) {
+                select.selectedIndex = select.selectedIndex + 1;
+            }
+        });
+        getPrevEl.addEventListener('click', function () {
+            if (select.selectedIndex != 0) {
+                select.selectedIndex = select.selectedIndex - 1;
+            }
+        });
+        createEl.addEventListener('click', function () {
+            if (inp.value != '') {
+                const option = document.createElement('option');
+                option.innerText = inp.value;
+                select.appendChild(option);
+                inp.value = '';
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
