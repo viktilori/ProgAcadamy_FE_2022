@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+
+        td {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Построить прямоугольный треугольник состоящий из символа "*".
+
+    2. Дано два числа A и B где (A<B). 
+        Выведите на экран суму всех чисел расположенных в числовом промежутке от А до В. 
+        Выведите на экран все нечетные значения, расположенные в числовом промежутке от А до В. 
+
+    3. Вывести на экран ряд чисел Фибоначчи, состоящий из n элементов (n принять от пользователя).
+       Числа Фибоначчи – это элементы числовой последовательности, в которой каждое последующее число равно сумме двух предыдущих.
+
+    4. Вывести на экран таблицу умножения от 0 до 9.    -->
+
+    <script>
+        //1. Построить прямоугольный треугольник состоящий из символа "*".
+
+        for (let i = 1; i < 10; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for (let i = 1; i < 10; i++) {
+            for (let j = 10; j > i; j--) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+
+
+
+        // 2. Дано два числа A и B где (A<B). 
+        // Выведите на экран суму всех чисел расположенных в числовом промежутке от А до В.
+
+        var a = 10;
+        var b = 20;
+        document.write("Сума всех чисел расположенных в числовом промежутке от А = " + a + " до В = " + b + ":<br>")
+        sum = 0;
+        for (a; a < b; a++) {
+            sum += a;
+        }
+        document.write(sum + "<br><br>");
+
+        // Выведите на экран все нечетные значения, расположенные в числовом промежутке от А до В.
+        a = 10;
+        b = 20;
+        document.write("Все нечетные значения, расположенные в числовом промежутке от А = " + a + " до В = " + b + ":<br>");
+        for (a; a < b; a++) {
+            if (a % 2 == 1) {
+                document.write(a + '<br>');
+            }
+        }
+
+
+
+        // 3. Вывести на экран ряд чисел Фибоначчи, состоящий из n элементов (n принять от пользователя).
+        // Числа Фибоначчи – это элементы числовой последовательности, в которой каждое последующее число равно сумме двух предыдущих.
+        let n = +prompt("Enter n", 100);
+        document.write("<br> Ряд чисел Фибоначчи, состоящий из " + n + " элементов: <br><br>");
+        let arr = new Array(n);
+        arr[0] = 1;
+        arr[1] = 1;
+        document.write(arr[0] + "<br>");
+        document.write(arr[1] + "<br>");
+        for (i = 2; i < arr.length; i++) {
+            arr[i] = arr[i - 1] + arr[i - 2];
+            document.write(arr[i] + "<br>");
+        }
+
+        //4. Вывести на экран таблицу умножения от 0 до 9. 
+        document.write("<table border>")
+        for (let i = 1; i < 10; i++) {
+            document.write("<tr>")
+            for (let j = 1; j < 10; j++) {
+                document.write(`<td>${j}*${i}=${j * i}</td>`);
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+
+</html>

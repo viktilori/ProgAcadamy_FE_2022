@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    1. Сделать собственные примеры методов применяемых для массивов.
+
+    2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+     Результат должен выводиться в консоль.
+
+    3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь.
+
+    4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя. Сортировка осушествляется методом sort().
+    
+    5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+
+    6. Необходимо получить предпоследний элемент из массива month и вывести его на экран. 
+    var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
+    7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные из двух массивов и вывести их в одну строку.  -->
+
+    <script>
+        // console.log("All cities:");
+        // var cities = ["Kyiv", "Kharkiv", "Odesa", "Dnipro", "Lviv", "Rivne"];
+        // console.log(cities);
+        // // cities.reverse();
+        // cities.shift();
+        // console.log("After shift():");
+        // console.log(cities);
+        // console.log("After unshift('Kyiv'):");
+        // cities.unshift("Kyiv");
+        // console.log(cities);
+
+        // cities.pop();
+        // console.log("After pop():");
+        // console.log(cities);
+        // console.log("After push('Rivne'):");
+        // cities.push("Rivne");
+        // console.log(cities);
+
+        // console.log("After slice(1,6):");
+        // var arr = cities.slice(1, 6);
+        // console.log(arr);
+
+        // var cities2 = ['Lutsk', 'Donetsk', 'Mariupol', 'Sevastopol'];
+        // var cities3 = cities.concat(cities2);
+
+        // console.log(cities3);
+
+        // var numbers = [3, -55, 345, 51, 054, 23, 5943, -59321];
+        // console.log(numbers);
+        // numbers.sort(function (a, b) { return a - b; });
+        // console.log(numbers);
+
+        // console.log(cities3);
+        // console.log("Cities after splice(1,3):");
+        // var del = cities3.splice(1, 3);
+        // console.log(cities3);
+
+
+        // var ins = cities3.splice(1, 0, 'Kharkiv', 'Odesa', 'Dnipro');
+        // console.log("Cities after splice(1, 0, 'Kharkiv', 'Odesa', 'Dnipro'):");
+        // console.log(cities3);
+
+        // document.write(cities3.join(", ") + "." + "<br>");
+
+
+        // 2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array). Результат должен выводиться в консоль.
+        // let maxValue = -Infinity;
+        // let minValue = Infinity;
+        // var arr = [3, -55, 345, 51, 054, 23, 5943, -59321];
+        // document.write("Values: " + arr.join(", ") + "<br>");
+        // function getMinAndMax() {
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         if (arguments[i] > maxValue) {
+        //             maxValue = arguments[i];
+        //         } else {
+        //             minValue = arguments[i];
+        //         }
+        //     }
+        //     document.write("Maxvalue: " + maxValue + "<br>");
+        //     document.write("Minvalue: " + minValue + "<br>");
+        // }
+
+        // getMinAndMax(3, -55, 345, 51, 054, 23, 5943, -59321);
+
+
+
+        // 3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь.
+
+        // var firstIndex = +prompt("Enter first number from 0 to 12");
+        // var secondIndex = +prompt("Enter second number from 0 to 12");
+        // var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        // for (firstIndex; firstIndex <= secondIndex; firstIndex++) {
+        //     document.write(array[firstIndex] + '<br>')
+        // }
+
+
+
+        // 4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя. Сортировка осушествляется методом sort().
+        // var arrOfNumbers = [];
+        // var number;
+        // for (i = 0; i <= 10; i++) {
+        //     number = prompt("Enter number");
+        //     arrOfNumbers.push(number);
+        // }
+        // document.write(arrOfNumbers + '<br>');
+        // var arrOfSortNumbers = arrOfNumbers.sort(function (a, b) { return a - b; });
+        // document.write(arrOfSortNumbers);
+
+
+        //5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+
+        // var cities = ['Lutsk', 'Donetsk', 'Mariupol', 'Sevastopol', 'Kharkiv', 'Odesa', 'Dnipro'];
+        // document.write(cities.join(", ") + ".<br>");
+        // var city = +prompt("Enter number");
+        // cities.splice(city, 0, "Kyiv");
+        // document.write(cities.join(", ") + '.');
+
+
+
+        //6. Необходимо получить предпоследний элемент из массива month и вывести его на экран.
+
+        // var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+        // document.write(month[month.length - 2]);
+
+
+
+
+        //7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные из двух массивов и вывести их в одну строку.  -->
+
+        // var month = ["Январь", "Февраль", "Март", "Апрель"];
+        // var days = [31, 28, 31, 30];
+        // for (i = 0; i < month.length; i++) {
+        //     document.write(month[i].concat(` - ${days[i]} days, `));
+        // }
+
+
+
+    </script>
+</body>
+
+</html>
