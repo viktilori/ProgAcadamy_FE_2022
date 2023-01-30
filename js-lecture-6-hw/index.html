@@ -107,35 +107,53 @@
         //содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
         //Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
 
-        const employees = new Array;
-        const employeesSum = prompt('Кількість робітників?')
-        let employee = new Object;
+        const employees = [];
+        const employeesSum = prompt('Кількість робітників?');
         for (i = 0; i < employeesSum; i++) {
+            let employee = new Object;
             employee.name = prompt('Name?');
             employee.sName = prompt('Surname?');
             employee.age = +prompt('Age?');
             employee.occupation = prompt('Occupation?');
             employees.push(employee);
+            employee.showInfo = function () {
+                document.write(`Name: ${this.name}; Surname: ${this.sName}; Age: ${this.age}; Occupation: ${this.occupation}; Salary: ${this.salary}.`);
+            }
         }
-        employee.showInfo = function () {
-            document.write(`Name: ${this.name}, Surname: ${this.sName}, Age: ${this.age}, Occupation: ${this.occupation}`);
+        // for (i = 0; i < employees.length; i++) {
+        //     employees[i].showInfo();
+        //     document.write(`<br>`);
+        // }
+
+        // 4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+        //    будет добавлять новое свойство "salary", хранящее зарплату сотрудника.
+        //    Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+        //        • "director" — 3000;
+        //        • "manager" — 1500;
+        //        • "programmer" — 2000;
+        //        • для остальных значений — 1000.
+        //    После выполнения функции — вывести информацию о сотрудниках.
+
+        function addSalary() {
+            for (i = 0; i < employees.length; i++) {
+                if (employees[i]['occupation'] === 'director') {
+                    employees[i]['salary'] = 3000;
+                } else if (employees[i]['occupation'] === 'manager') {
+                    employees[i]['salary'] = 1500;
+                } else if (employees[i]['occupation'] === 'programmer') {
+                    employees[i]['salary'] = 2000;
+                }
+            }
         }
 
-        //employee.showInfo();
+        for (i = 0; i < employees.length; i++) {
+            addSalary();
+        }
+
         for (i = 0; i < employees.length; i++) {
             employees[i].showInfo();
+            document.write(`<br>`);
         }
-
-
-    // 4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
-    //    будет добавлять новое свойство "salary", хранящее зарплату сотрудника.
-    //    Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
-    //        • "director" — 3000;
-    //        • "manager" — 1500;
-    //        • "programmer" — 2000;
-    //        • для остальных значений — 1000.
-    //    После выполнения функции — вывести информацию о сотрудниках.
-
 
 
     </script>
